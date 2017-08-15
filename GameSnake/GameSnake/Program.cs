@@ -27,11 +27,6 @@ namespace GameSnake
             Console.ReadKey();
 
         }
-        //static void Drow (int x, int y, char sym) 
-        //{
-        //    Console.SetCursorPosition(x, y);
-        //    Console.Write(sym);
-
-        //}
+        
     }
 }
