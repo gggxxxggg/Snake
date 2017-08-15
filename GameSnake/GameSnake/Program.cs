@@ -21,11 +21,14 @@ namespace GameSnake
             p4.Drow();
 
 
-            HorizontalLine q1 = new HorizontalLine(1, 20, 8, '$');
+            HorizontalLine q1 = new HorizontalLine(1, 6, 8, '$');
             q1.Drow();
 
-            Console.ReadKey();
+           
+            VerticalLine w1 = new VerticalLine(10, 3, 8, '*');
+            w1.Drow();
 
+     Console.ReadKey();
         }
         
     }
