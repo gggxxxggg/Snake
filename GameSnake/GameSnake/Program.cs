@@ -15,6 +15,20 @@ namespace GameSnake
 
             Point p2 = new Point(4,5,'#');
             p2.Drow();
+            Point p3 = new Point(6, 7, '-');
+            p3.Drow();
+            Point p4 = new Point(3, 8, '+');
+            p4.Drow();
+
+            List<Point> pList = new List<Point>();
+            pList.Add(p1);
+            pList.Add(p2);
+            pList.Add(p3);
+            pList.Add(p4);
+            foreach(Point i in pList) 
+            {
+                Console.WriteLine(i);
+            }
 
             Console.ReadKey();
 
