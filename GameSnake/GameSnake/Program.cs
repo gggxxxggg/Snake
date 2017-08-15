@@ -20,15 +20,9 @@ namespace GameSnake
             Point p4 = new Point(3, 8, '+');
             p4.Drow();
 
-            List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);
-            pList.Add(p3);
-            pList.Add(p4);
-            foreach(Point i in pList) 
-            {
-                Console.WriteLine(i);
-            }
+
+            HorizontalLine q1 = new HorizontalLine(1, 20, 8, '$');
+            q1.Drow();
 
             Console.ReadKey();
 
