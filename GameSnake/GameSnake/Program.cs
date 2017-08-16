@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace GameSnake
@@ -25,8 +26,14 @@ namespace GameSnake
             Point p = new Point(4,5,'*');
             Snake s = new Snake(p,6,Direction.RIGHT);
             s.Drow();
+            s.Move();
+            Thread.Sleep(300);
+            s.Move();
+            Thread.Sleep(300);
+            s.Move();
+            Thread.Sleep(300);
 
-     Console.ReadKey();
+            Console.ReadKey();
         }
         
     }
