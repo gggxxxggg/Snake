@@ -8,7 +8,7 @@ namespace GameSnake
 {
     class Figure
     {
-      protected List<Point> pList;
+        protected List<Point> pList;
 
         public void Drow()
         {
