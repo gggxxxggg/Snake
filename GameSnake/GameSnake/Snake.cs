@@ -8,11 +8,12 @@ namespace GameSnake
 {
     class Snake : Figure
     {
-        Direction direction;
+      public Direction direction;
+
         public  Snake(Point tail, int lenght, Direction _direction) 
         {
             pList = new List<Point>();
-            _direction = direction;
+            direction = _direction;
 
             for (int i = 0; i < lenght; i++)
             {
@@ -40,9 +41,29 @@ namespace GameSnake
         public Point GetNextPoint()
         {
             Point head = pList.Last();
-            Point nextPoint = head;
+            Point nextPoint = new Point(head);
             nextPoint.Move(1, direction);
             return nextPoint;
+        }
+
+        public void jostik (ConsoleKey key)
+        {
+            if (key == ConsoleKey.LeftArrow)
+                    {
+                       direction = Direction.LEFT;
+                    }
+                    else if (key == ConsoleKey.RightArrow)
+                    {
+                        direction = Direction.RIGHT;
+                    }
+                    else if (key == ConsoleKey.UpArrow)
+                    {
+                        direction = Direction.UP;
+                    }
+                    else if (key == ConsoleKey.DownArrow)
+                    {
+                        direction = Direction.DOWN;
+                    }
         }
     }
 
