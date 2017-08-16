@@ -7,7 +7,7 @@
     <ProjectGuid>{87731CC4-B180-478C-B0A1-FA911B53CD67}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Gamesnake</RootNamespace>
+    <RootNamespace>GameSnake</RootNamespace>
     <AssemblyName>GameSnake</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
