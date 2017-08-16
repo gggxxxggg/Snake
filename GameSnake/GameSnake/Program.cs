@@ -24,16 +24,24 @@ namespace GameSnake
             leftLine.Drow();
 
             Point p = new Point(4,5,'*');
-            Snake s = new Snake(p,6,Direction.RIGHT);
+            Snake s = new Snake(p,2,Direction.RIGHT);
             s.Drow();
-            s.Move();
-            Thread.Sleep(300);
-            s.Move();
-            Thread.Sleep(300);
-            s.Move();
-            Thread.Sleep(300);
+           
 
-            Console.ReadKey();
+
+            while (true)
+            {
+
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    s.jostik(key.Key);
+                }
+                Thread.Sleep(100);
+                s.Move();
+            }
+
+            
         }
         
     }
