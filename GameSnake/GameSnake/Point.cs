@@ -40,26 +40,28 @@ namespace GameSnake
             }
             else if (direction == Direction.UP)
             {
-                y = y + offset;
+                y = y - offset;
             }
             else if (direction == Direction.DOWN)
             {
-                y = y - offset;
+                y = y + offset;
             }
         }
 
 
-        public void Clen()
-        {
-            sym = ' ';
-            Drow();
-        }
+       
        public  void Drow()
         {
-            Console.SetCursorPosition( x, y);
+            Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
 
+       public void Clen()
+       {
+           sym = ' ';
+           Drow();
+       }
     }
+
         
 }
