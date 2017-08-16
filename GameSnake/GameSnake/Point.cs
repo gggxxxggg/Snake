@@ -47,6 +47,13 @@ namespace GameSnake
                 y = y - offset;
             }
         }
+
+
+        public void Clen()
+        {
+            sym = ' ';
+            Drow();
+        }
        public  void Drow()
         {
             Console.SetCursorPosition( x, y);
