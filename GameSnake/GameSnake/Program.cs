@@ -22,10 +22,6 @@ namespace GameSnake
             VerticalLine leftLine = new VerticalLine(78,0,24,'*');
             leftLine.Drow();
 
-            Point p = new Point(4,5,'*');
-            Snake s = new Snake(p,6,Direction.RIGHT);
-            s.Drow();
-
      Console.ReadKey();
         }
         
