@@ -10,23 +10,17 @@ namespace GameSnake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1,3,'*');
-            p1.Drow();
-
-            Point p2 = new Point(4,5,'#');
-            p2.Drow();
-            Point p3 = new Point(6, 7, '-');
-            p3.Drow();
-            Point p4 = new Point(3, 8, '+');
-            p4.Drow();
+            Console.SetBufferSize(80, 25);
 
 
-            HorizontalLine q1 = new HorizontalLine(1, 6, 8, '$');
-            q1.Drow();
-
-           
-            VerticalLine w1 = new VerticalLine(10, 3, 8, '*');
-            w1.Drow();
+            HorizontalLine upLine = new HorizontalLine(0, 78, 0, '*');
+            upLine.Drow();
+            HorizontalLine downLine = new HorizontalLine(0, 78, 24, '*');
+            downLine.Drow();
+            VerticalLine rightLine = new VerticalLine(0,0,24,'*');
+            rightLine.Drow();
+            VerticalLine leftLine = new VerticalLine(78,0,24,'*');
+            leftLine.Drow();
 
      Console.ReadKey();
         }
