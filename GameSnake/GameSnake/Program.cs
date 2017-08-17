@@ -25,8 +25,7 @@ namespace GameSnake
             Point food = foodCreator.CreateFood();
             food.Drow();
 
-          
-
+         
             while (true)
             {
 
