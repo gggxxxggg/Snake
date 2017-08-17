@@ -18,6 +18,15 @@ namespace GameSnake
             }
 
         }
+
+             public override void Drow()
+            {
+             Console.ForegroundColor = ConsoleColor.DarkRed;
+            base.Drow();
+            Console.ForegroundColor = ConsoleColor.White;
+            }
+        
+           
        
     }
 

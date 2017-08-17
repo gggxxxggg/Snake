@@ -12,23 +12,23 @@ namespace GameSnake
         public  int y ;
         public  char sym;
 
-        public Point() 
+       public Point() 
         { 
 
         }
-        public Point(int _x, int _y, char _sym)
+       public Point(int _x, int _y, char _sym)
         {
             x = _x;
             y = _y;
             sym = _sym;
         }
-        public Point(Point p)
+       public Point(Point p)
         {
             x = p.x;
             y = p.y;
             sym = p.sym;
         }
-        public void Move(int offset, Direction direction)
+       public void Move(int offset, Direction direction)
         {
             if (direction == Direction.RIGHT)
             {
@@ -48,18 +48,25 @@ namespace GameSnake
             }
         }
 
-
-        internal bool isHit(Point p)
+       internal bool isHit(Point p)
         {
             return p.x == this.x && p.y == this.y;
         }
 
-       
        public  void Drow()
         {
+
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
+
+       public  void Drow1()
+       {
+           Console.ForegroundColor = ConsoleColor.DarkBlue;
+           Console.SetCursorPosition(x, y);
+           Console.Write(sym);
+           Console.ForegroundColor = ConsoleColor.White;
+       }
 
        public void Clen()
        {

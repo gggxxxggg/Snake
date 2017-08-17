@@ -23,10 +23,6 @@ namespace GameSnake
             }
         }
 
-
-
-
-
         internal void Move()
         {
             Point tail = pList.First();
@@ -35,9 +31,9 @@ namespace GameSnake
             pList.Add(head);
 
             tail.Clen();
-            head.Drow();
+            head.Drow1();
         }
-
+      
         public Point GetNextPoint()
         {
             Point head = pList.Last();
@@ -68,15 +64,11 @@ namespace GameSnake
 
         internal bool Eat(Point food)
         {
-           
-            
-            Point head = GetNextPoint();
-
+            Point head = pList.Last();
             if (head.isHit(food))
             {
-                food.sym = head.sym;
+               food.sym = head.sym;
                pList.Add(food);
-               
                return true;
             }
             else

@@ -30,16 +30,16 @@ namespace GameSnake
             FoodCreator foodCreator = new FoodCreator(80, 25, '@');
             Point food = foodCreator.CreateFood();
             food.Drow();
-           
-
 
             while (true)
             {
+                food.Drow();
                 if (s.Eat(food))
                 {
                     food = foodCreator.CreateFood();
                     food.Drow();
                 }
+                Thread.Sleep(100);
 
                 if (Console.KeyAvailable)
                 {
@@ -52,6 +52,8 @@ namespace GameSnake
 
             
         }
-        
+
+
+       
     }
 }
