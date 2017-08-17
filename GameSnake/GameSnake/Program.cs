@@ -24,13 +24,22 @@ namespace GameSnake
             leftLine.Drow();
 
             Point p = new Point(4,5,'*');
-            Snake s = new Snake(p,2,Direction.RIGHT);
+            Snake s = new Snake(p,4,Direction.RIGHT);
             s.Drow();
+
+            FoodCreator foodCreator = new FoodCreator(80, 25, '@');
+            Point food = foodCreator.CreateFood();
+            food.Drow();
            
 
 
             while (true)
             {
+                if (s.Eat(food))
+                {
+                    food = foodCreator.CreateFood();
+                    food.Drow();
+                }
 
                 if (Console.KeyAvailable)
                 {
