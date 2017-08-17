@@ -18,5 +18,30 @@ namespace GameSnake
             }
 
         }
+
+        internal bool isHit(Figure figure)
+        {
+            foreach(var point in pList)
+            {
+                if (figure.isHit(point))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+      
+        private bool isHit(Point point)
+        {
+            foreach (var p in pList)
+            {
+                if (p.isHit(point))
+                {
+                    return true;
+                }
+                
+            }
+            return false;
+        }
     }
 }

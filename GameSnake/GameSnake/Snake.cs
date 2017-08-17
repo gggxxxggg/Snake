@@ -76,6 +76,20 @@ namespace GameSnake
                 return false; 
             }
         }
+
+        internal bool isHitTail()
+        {
+            Point head = pList.Last();
+
+            for (var i = 0; i < pList.Count - 1; i++ )
+            {
+                if (head.isHit(pList[ i ]))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 
 }

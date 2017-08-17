@@ -24,6 +24,7 @@ namespace GameSnake
              Console.ForegroundColor = ConsoleColor.DarkRed;
             base.Drow();
             Console.ForegroundColor = ConsoleColor.White;
+                 
             }
         
            

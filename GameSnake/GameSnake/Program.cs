@@ -13,15 +13,9 @@ namespace GameSnake
         {
             Console.SetBufferSize(80, 25);
 
-
-            HorizontalLine upLine = new HorizontalLine(0, 78, 0, '*');
-            upLine.Drow();
-            HorizontalLine downLine = new HorizontalLine(0, 78, 24, '*');
-            downLine.Drow();
-            VerticalLine rightLine = new VerticalLine(0,0,24,'*');
-            rightLine.Drow();
-            VerticalLine leftLine = new VerticalLine(78,0,24,'*');
-            leftLine.Drow();
+            Walls walls = new Walls();
+            walls.BuildWalls(80, 25);
+           
 
             Point p = new Point(4,5,'*');
             Snake s = new Snake(p,4,Direction.RIGHT);
@@ -31,8 +25,15 @@ namespace GameSnake
             Point food = foodCreator.CreateFood();
             food.Drow();
 
+          
+
             while (true)
             {
+
+                if (walls.isHit(s) || s.isHitTail())
+                {
+                    break;
+                }
                 food.Drow();
                 if (s.Eat(food))
                 {
