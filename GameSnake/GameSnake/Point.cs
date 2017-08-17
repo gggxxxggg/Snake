@@ -49,6 +49,11 @@ namespace GameSnake
         }
 
 
+        internal bool isHit(Point p)
+        {
+            return p.x == this.x && p.y == this.y;
+        }
+
        
        public  void Drow()
         {
