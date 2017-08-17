@@ -20,7 +20,10 @@ namespace GameSnake
                 Point q = new Point(tail);
                 q.Move(i, direction);
                 pList.Add(q);
+               
             }
+            
+            
         }
 
         internal void Move()
@@ -67,7 +70,9 @@ namespace GameSnake
             Point head = pList.Last();
             if (head.isHit(food))
             {
+               food.Clen();
                food.sym = head.sym;
+               food.Drow1();
                pList.Add(food);
                return true;
             }
